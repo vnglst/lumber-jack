@@ -1,0 +1,46 @@
+.button {
+  margin: 0;
+  cursor: pointer;
+  background: inherit;
+  border: none;
+  color: #011627;
+  padding: 0;
+  font-size: 2em;
+}
+
+.button svg {
+  height: 2em;
+  width: 2em;
+}
+
+.button:hover:not([disabled]) {
+  animation: zoom 100ms ease-in-out 1 forwards;
+}
+
+.button:active:not([disabled]) {
+  animation: press 100ms ease-in-out 1 forwards;
+}
+
+.button:disabled {
+  /* color: #002747; */
+  /* opacity: 0.5; */
+  cursor: not-allowed;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes press {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
