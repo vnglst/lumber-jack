@@ -22,8 +22,6 @@
 }
 
 .button:disabled {
-  /* color: #002747; */
-  /* opacity: 0.5; */
   cursor: not-allowed;
 }
 

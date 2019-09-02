@@ -1,12 +1,12 @@
-import React from "react"
-import { TreeButton } from "./components/Buttons"
-import { observer, inject } from "mobx-react"
-import "./App.css"
+import React from "react";
+import { TreeButton } from "./components/Buttons";
+import { observer, inject } from "mobx-react";
+import "./App.css";
+import { Lumber } from "./components/Icons";
 
-const DAMAGE = 20
+const DAMAGE = 20;
 
 const App = ({ forest }) => {
-  console.log("f", forest.total())
   return (
     <>
       {forest.trees.map((tree, index) => {
@@ -17,15 +17,18 @@ const App = ({ forest }) => {
             health={tree.health}
             key={index}
             onClick={e => {
-              e.preventDefault()
-              tree.chop(DAMAGE)
+              e.preventDefault();
+              tree.chop(DAMAGE);
             }}
           />
-        )
+        );
       })}
-      <span className="score">TOTAL {forest.total()}</span>
+      <span className="score">
+        <Lumber />
+        <span>{forest.total()}</span>
+      </span>
     </>
-  )
-}
+  );
+};
 
-export default inject("forest")(observer(App))
+export default inject("forest")(observer(App));
