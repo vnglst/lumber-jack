@@ -1,10 +1,10 @@
 import * as React from "react";
 import "./Buttons.css";
-import { Tree, Stump } from "./Icons";
+import * as Icons from "./Icons";
 
 interface Props {
   children?: React.ReactNode;
-  disabled: boolean;
+  disabled?: boolean;
   className?: string;
   onClick?: React.EventHandler<React.MouseEvent<HTMLElement>>;
   onTouchStart?: React.EventHandler<React.TouchEvent<HTMLElement>>;
@@ -20,16 +20,18 @@ export const Button: React.FC<Props> = ({ children, className, ...rest }) => {
   );
 };
 
-interface TreeButtonProps extends Props {
-  health: number;
-}
-
-export const TreeButton: React.FC<TreeButtonProps> = ({ health, ...rest }) => {
-  const treeIsDead = health <= 0;
-
+export const TreeButton: React.FC<Props> = props => {
   return (
-    <Button disabled={treeIsDead} {...rest}>
-      {treeIsDead ? <Stump /> : <Tree />}
+    <Button {...props}>
+      <Icons.Tree />
+    </Button>
+  );
+};
+
+export const StumpButton: React.FC<Props> = props => {
+  return (
+    <Button disabled {...props}>
+      <Icons.Stump />
     </Button>
   );
 };

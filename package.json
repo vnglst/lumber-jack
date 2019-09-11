@@ -11,6 +11,7 @@
     "mobx": "^5.13.0",
     "mobx-react": "^6.1.3",
     "mobx-state-tree": "^3.14.1",
+    "prevent-double-tap-zoom": "^2.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
@@ -36,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/howler": "^2.1.1"
   }
 }

@@ -11,10 +11,7 @@ const forest = Forest.create();
 
 for (let x = 0; x < 6; x++) {
   for (let y = 0; y < 6; y++) {
-    forest.addTree({
-      x,
-      y
-    });
+    forest.addTree();
   }
 }
 
@@ -24,7 +21,7 @@ onPatch(forest, patch => {
 
 ReactDOM.render(
   <Provider forest={forest}>
-    <App />
+    <App forest={forest} />
   </Provider>,
   document.getElementById("root")
 );

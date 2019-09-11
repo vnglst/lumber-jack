@@ -1151,6 +1151,11 @@
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
   integrity sha512-OCutwjDZ4aFS6PB1UZ988C4YgwlBHJd6wCeQqaLdmadZ/7e+w79+hbMUFC1QXDNCmdyoRfAFdm0RypzwR+Qpag==
 
+"@types/howler@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/howler/-/howler-2.1.1.tgz#b2ba53009cc8415da5bb01d625a734babba11435"
+  integrity sha512-YLwc9L853r85WqZk4xCiROGGodmlAYlKb0rQWABt4opLd6QHn2QLXIApa6vRNqjZxkzbiPs6eZskaRGOw5fDAA==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
@@ -7702,6 +7707,13 @@ pretty-format@^24.8.0:
     ansi-styles "^3.2.0"
     react-is "^16.8.4"
 
+prevent-double-tap-zoom@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/prevent-double-tap-zoom/-/prevent-double-tap-zoom-2.0.4.tgz#18b5a81b29fcf9c44f5863305186c29c9f7ec593"
+  integrity sha1-GLWoGyn8+cRPWGMwUYbCnJ9+xZM=
+  dependencies:
+    typescript "^2.9.2"
+
 private@^0.1.6:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -9348,6 +9360,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
+  integrity sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
 
 typescript@^3.5.3:
   version "3.5.3"
