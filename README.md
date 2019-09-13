@@ -42,3 +42,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+log sounds: https://freesound.org/people/HerbertBoland/sounds/33209/
+logs svg: https://www.flaticon.com/free-icon/logs_2077046#term=logs&page=1&position=6
+tree: https://www.flaticon.com/free-icon/tree_490091#term=tree&page=1&position=11
+door: https://www.flaticon.com/free-icon/door_150368#term=door&page=3&position=48
+editing svgs: https://vectr.com/tmp/a2ZQkiB81C/b2iNqkFasJ

@@ -1,4 +1,4 @@
-.button {
+.icon-button {
   margin: 0;
   cursor: pointer;
   background: inherit;
@@ -6,10 +6,6 @@
   color: #011627;
   padding: 0;
   font-size: 2em;
-  touch-action: manipulation; /* disables double tap zoom */
-}
-
-.button svg {
   height: 2em;
   width: 2em;
 }

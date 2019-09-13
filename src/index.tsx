@@ -1,27 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "mobx-react";
 import { onPatch } from "mobx-state-tree";
-import { Forest } from "./components/models";
+import { Game } from "./components/models";
+import "./index.css";
 
-const forest = Forest.create();
+const game = Game.create();
 
 for (let x = 0; x < 6; x++) {
   for (let y = 0; y < 6; y++) {
-    forest.addTree();
+    game.addTree();
   }
 }
 
-onPatch(forest, patch => {
+onPatch(game, patch => {
   console.log(patch);
 });
 
 ReactDOM.render(
-  <Provider forest={forest}>
-    <App forest={forest} />
+  <Provider game={game}>
+    <App game={game} />
   </Provider>,
   document.getElementById("root")
 );
