@@ -21,15 +21,15 @@ li {
 }
 
 .jack {
+  font-size: 1em;
   padding: 0;
   margin: 0;
-  margin-top: -2em;
-  margin-bottom: 3em;
+  margin-bottom: 0.75em;
 }
 
 .jack svg {
-  height: 6em;
-  width: 6em;
+  height: 5.5em;
+  width: 5.5em;
 }
 
 .level-number {
@@ -59,11 +59,11 @@ li {
 
 .score-number {
   color: white;
-  font-size: 0.5em;
+  font-size: 0.45em;
   font-variant-numeric: tabular-nums;
   float: right;
   position: relative;
-  right: -4em;
-  top: 0em;
-  letter-spacing: -2px;
+  right: -4.5em;
+  top: 0.2em;
+  letter-spacing: -1px;
 }
