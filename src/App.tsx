@@ -1,9 +1,19 @@
 import React from "react";
-import * as Variants from "./components/Variants";
+import posed, { PoseGroup } from "react-pose";
 import { observer, inject } from "mobx-react";
+import * as Buttons from "./components/Buttons";
 import { IGame } from "./components/models";
 import * as Icons from "./components/Icons";
 import "./App.css";
+
+const Container = posed.ul({
+  enter: { staggerChildren: 10, staggerDirection: -1 }
+});
+
+const P = posed.li({
+  enter: { y: 0, opacity: 1 },
+  exit: { y: -100, opacity: 0 }
+});
 
 interface Props {
   game: IGame;
@@ -12,14 +22,28 @@ interface Props {
 const App: React.FC<Props> = ({ game }) => {
   return (
     <>
-      {game.forest.map((tree, index) => {
-        if (tree.isDead && tree.hasDoor)
-          return <Variants.Door restartGame={game.restart} key={index} />;
-
-        if (tree.isDead) return <Variants.Stump key={index} />;
-
-        return <Variants.Tree tree={tree} key={index} />;
-      })}
+      <div className="center">
+        <Buttons.Jack level={game.level} />
+      </div>
+      <PoseGroup>
+        <Container initialPose="exit" pose="enter" key={game.level}>
+          {game.forest.map((tree, index) => {
+            if (tree.isDead && tree.hasDoor)
+              return (
+                <Buttons.Door
+                  startNextLevel={game.startNextLevel}
+                  key={index}
+                />
+              );
+            if (tree.isDead) return <Buttons.Stump key={index} />;
+            return (
+              <P key={index}>
+                <Buttons.Tree tree={tree} />
+              </P>
+            );
+          })}
+        </Container>
+      </PoseGroup>
       <span className="score">
         <Icons.Lumber />
         <span className="score-number">{game.stats.wood}</span>

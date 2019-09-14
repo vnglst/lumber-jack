@@ -1,17 +1,20 @@
 import { types, Instance, getParent } from "mobx-state-tree";
 
+const START_HEALTH = 20;
+const HEALTH_GAIN = 20;
 
 export const Tree = types
   .model("Tree", {
-    health: 40,
+    health: START_HEALTH,
     hasDoor: false,
+    hasCoin: false,
   })
   .actions(self => ({
     chop() {
       self.health -= 20;
       const game = getParent(self, 2);
-      if (game.isCleared) self.hasDoor = true;
-      if (self.health <= 0) game.addWood();
+      if (game.isCleared) self.hasDoor = true; // last tree is always door to next level
+      if (self.health <= 0) game.addWood(); // increase user wood
     }
   }))
   .views(self => ({
@@ -27,6 +30,7 @@ export const Game = types
   .model("Game", {
     forest: types.array(Tree),
     wood: 0,
+    level: 1
   })
   .actions(self => ({
     addTree() {
@@ -35,10 +39,12 @@ export const Game = types
     addWood() {
       self.wood += 1;
     },
-    restart() {
+    startNextLevel() {
+      self.level += 1;
       self.forest.forEach(tree => {
-        tree.health = 40;
+        tree.health = START_HEALTH + self.level * HEALTH_GAIN;
         tree.hasDoor = false;
+        tree.hasCoin = Math.random() * self.level > 3 // coin appear from level 3
       })
     }
   })

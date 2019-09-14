@@ -3,6 +3,45 @@
   margin: auto;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jack {
+  padding: 0;
+  margin: 0;
+  margin-top: -2em;
+  margin-bottom: 3em;
+}
+
+.jack svg {
+  height: 6em;
+  width: 6em;
+}
+
+.level-number {
+  color: white;
+  font-size: 1em;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  right: 1.5em;
+  bottom: 5em;
+  letter-spacing: -2px;
+}
+
 .score {
   position: fixed;
   bottom: 0;
@@ -18,7 +57,7 @@
   height: 2em;
 }
 
-.score .score-number {
+.score-number {
   color: white;
   font-size: 0.5em;
   font-variant-numeric: tabular-nums;

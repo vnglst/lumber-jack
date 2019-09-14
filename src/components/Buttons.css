@@ -1,10 +1,13 @@
-.icon-button {
+.button {
   margin: 0;
   cursor: pointer;
   background: inherit;
   border: none;
   color: #011627;
   padding: 0;
+}
+
+.icon-button {
   font-size: 2em;
   height: 2em;
   width: 2em;

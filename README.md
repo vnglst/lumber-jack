@@ -48,3 +48,4 @@ logs svg: https://www.flaticon.com/free-icon/logs_2077046#term=logs&page=1&posit
 tree: https://www.flaticon.com/free-icon/tree_490091#term=tree&page=1&position=11
 door: https://www.flaticon.com/free-icon/door_150368#term=door&page=3&position=48
 editing svgs: https://vectr.com/tmp/a2ZQkiB81C/b2iNqkFasJ
+lumber jack svg: https://www.flaticon.com/free-icon/lumberjack_2068190
