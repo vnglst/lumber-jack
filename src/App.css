@@ -1,0 +1,47 @@
+#root {
+  width: 24em;
+  margin: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.score {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75em;
+  font-size: 1.5em;
+}
+
+.score svg {
+  float: right;
+  width: 2em;
+  height: 2em;
+}
+
+.score-number {
+  color: white;
+  font-size: 0.45em;
+  font-variant-numeric: tabular-nums;
+  float: right;
+  position: relative;
+  right: -4.5em;
+  top: 0.2em;
+  letter-spacing: -1px;
+}
