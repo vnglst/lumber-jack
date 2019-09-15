@@ -5,6 +5,8 @@
   border: none;
   color: #011627;
   padding: 0;
+  cursor: inherit;
+  /* cursor: url("./axe.svg"), pointer; */
 }
 
 .icon-button {
@@ -26,13 +28,13 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 
 @keyframes press {
   0% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1.05);

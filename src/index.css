@@ -3,6 +3,8 @@ html {
   box-sizing: border-box;
   height: 100%;
   display: grid;
+  /* https://www.flaticon.com/free-icon/axe_222439#term=axe&page=1&position=33 */
+  cursor: url("./axe.svg"), pointer;
 }
 
 body {
