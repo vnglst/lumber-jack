@@ -32,9 +32,11 @@ onSnapshot(game, snapshot => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot));
 });
 
-onPatch(game, patch => {
-  console.log(patch);
-});
+if (process.env.NODE_ENV === "development") {
+  onPatch(game, patch => {
+    console.log(patch);
+  });
+}
 
 ReactDOM.render(
   <Provider game={game}>
