@@ -6,11 +6,11 @@ import { IGame } from "./components/models";
 import * as Icons from "./components/Icons";
 import "./App.css";
 
-const Container = posed.ul({
+const Container = posed.div({
   enter: { staggerChildren: 10, staggerDirection: -1 }
 });
 
-const P = posed.li({
+const P = posed.span({
   enter: { y: 0, opacity: 1 },
   exit: { y: -100, opacity: 0 }
 });
@@ -21,7 +21,7 @@ interface Props {
 
 const App: React.FC<Props> = ({ game }) => {
   return (
-    <>
+    <main>
       <div className="center">
         <Buttons.Jack level={game.level} />
       </div>
@@ -37,7 +37,7 @@ const App: React.FC<Props> = ({ game }) => {
               );
             if (tree.isDead) return <Buttons.Stump key={index} />;
             return (
-              <P key={index}>
+              <P className="animated-tree" key={index}>
                 <Buttons.Tree tree={tree} />
               </P>
             );
@@ -48,7 +48,7 @@ const App: React.FC<Props> = ({ game }) => {
         <Icons.Lumber />
         <span className="score-number">{game.stats.wood}</span>
       </span>
-    </>
+    </main>
   );
 };
 

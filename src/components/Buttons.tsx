@@ -12,6 +12,7 @@ interface TreeProps {
 export const Tree: React.FC<TreeProps> = ({ tree }) => {
   return (
     <button
+      aria-label="tree"
       type="button"
       className="button icon-button tree"
       onClick={e => {
@@ -34,7 +35,7 @@ export const Stump: React.FC = () => {
   return (
     <>
       <Icons.Lumber className="lumber-animation" />
-      <button className="button icon-button" disabled>
+      <button aria-label="stump" className="button icon-button" disabled>
         <Icons.Stump />
       </button>
     </>
@@ -50,6 +51,7 @@ export const Door: React.FC<DoorProps> = ({ startNextLevel }) => {
     <>
       <Icons.Lumber className="lumber-animation" />
       <button
+        aria-label="door"
         className="button icon-button"
         onClick={e => {
           e.preventDefault();
@@ -70,6 +72,7 @@ interface JackProps {
 export const Jack: React.FC<JackProps> = ({ level }) => {
   return (
     <button
+      aria-label="jack"
       className="button jack"
       onClick={e => {
         e.preventDefault();

@@ -45,3 +45,7 @@ li {
   top: 0.2em;
   letter-spacing: -1px;
 }
+
+.animated-tree {
+  display: inline-block;
+}
