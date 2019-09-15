@@ -1,18 +1,20 @@
 .button {
   margin: 0;
-  cursor: pointer;
   background: inherit;
   border: none;
   color: #011627;
   padding: 0;
-  cursor: inherit;
-  /* cursor: url("./axe.svg"), pointer; */
+  cursor: pointer;
 }
 
 .icon-button {
   font-size: 2em;
   height: 2em;
   width: 2em;
+}
+
+.icon-button.tree {
+  cursor: url("./axe.svg"), pointer;
 }
 
 .button:hover:not([disabled]) {
@@ -38,5 +40,66 @@
   }
   100% {
     transform: scale(1.05);
+  }
+}
+
+.jack {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.75em;
+}
+
+.jack svg {
+  height: 5.5em;
+  width: 5.5em;
+}
+
+.jack .level-number {
+  color: white;
+  font-size: 1em;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  right: 1.5em;
+  bottom: 5em;
+  letter-spacing: -2px;
+}
+
+.lumber-animation {
+  z-index: 1;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  animation-name: lumber-animation;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+@keyframes lumber-animation {
+  0% {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    opacity: 0;
+    width: 1em;
+    height: 1em;
+  }
+  20% {
+    position: absolute;
+    bottom: calc(50% - 10em);
+    left: calc(50% - 10em);
+    width: 20em;
+    height: 20em;
+    opacity: 1;
+  }
+  100% {
+    position: absolute;
+    left: calc(100% - 5em);
+    bottom: 1em;
+    width: 3em;
+    height: 3em;
+    opacity: 0.3;
   }
 }

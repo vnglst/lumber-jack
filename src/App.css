@@ -20,28 +20,6 @@ li {
   text-align: center;
 }
 
-.jack {
-  font-size: 1em;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 0.75em;
-}
-
-.jack svg {
-  height: 5.5em;
-  width: 5.5em;
-}
-
-.level-number {
-  color: white;
-  font-size: 1em;
-  font-variant-numeric: tabular-nums;
-  position: relative;
-  right: 1.5em;
-  bottom: 5em;
-  letter-spacing: -2px;
-}
-
 .score {
   position: fixed;
   bottom: 0;
