@@ -1,15 +1,15 @@
 import * as React from "react";
 import * as SoundFx from "./soundFx";
-import { ITree } from "./models";
+import { ITree } from "../models";
 import * as Icons from "./Icons";
 
 import "./Buttons.css";
 
-interface TreeProps {
+interface Props {
   tree: ITree;
 }
 
-export const Tree: React.FC<TreeProps> = ({ tree }) => {
+export const Tree: React.FC<Props> = ({ tree }) => {
   return (
     <button
       aria-label="tree"
@@ -31,7 +31,7 @@ export const Tree: React.FC<TreeProps> = ({ tree }) => {
   );
 };
 
-export const Stump: React.FC = () => {
+export const Stump: React.FC<Props> = () => {
   return (
     <>
       <Icons.Lumber className="lumber-animation" />
@@ -39,6 +39,14 @@ export const Stump: React.FC = () => {
         <Icons.Stump />
       </button>
     </>
+  );
+};
+
+export const Nothing: React.FC = () => {
+  return (
+    <button aria-label="nothing" className="button icon-button" disabled>
+      <Icons.Nothing />
+    </button>
   );
 };
 
@@ -72,15 +80,27 @@ interface JackProps {
 export const Jack: React.FC<JackProps> = ({ level }) => {
   return (
     <button
-      aria-label="jack"
-      className="button jack"
       onClick={e => {
         e.preventDefault();
         SoundFx.imALumberjack.play();
       }}
+      className="button jack"
     >
       <Icons.Lumberjack />
       <span className="level-number">{level}</span>
+    </button>
+  );
+};
+
+interface StatsProps {
+  wood: number;
+}
+
+export const Stats: React.FC<StatsProps> = ({ wood }) => {
+  return (
+    <button className="button stats">
+      <Icons.Lumber />
+      <span className="stats-number">{wood}</span>
     </button>
   );
 };
