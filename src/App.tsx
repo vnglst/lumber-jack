@@ -2,8 +2,7 @@ import React from "react";
 import posed, { PoseGroup } from "react-pose";
 import { observer, inject } from "mobx-react";
 import * as Buttons from "./components/Buttons";
-import { IGame } from "./components/models";
-import * as Icons from "./components/Icons";
+import { IGame } from "./models";
 import "./App.css";
 
 const Container = posed.div({
@@ -22,12 +21,10 @@ interface Props {
 const App: React.FC<Props> = ({ game }) => {
   return (
     <main>
-      <div className="center">
-        <Buttons.Jack level={game.level} />
-      </div>
       <PoseGroup>
         <Container initialPose="exit" pose="enter" key={game.level}>
           {game.forest.map((tree, index) => {
+            if (tree.isGone) return <Buttons.Nothing key={index} />;
             if (tree.isDead && tree.hasDoor)
               return (
                 <Buttons.Door
@@ -35,7 +32,7 @@ const App: React.FC<Props> = ({ game }) => {
                   key={index}
                 />
               );
-            if (tree.isDead) return <Buttons.Stump key={index} />;
+            if (tree.isDead) return <Buttons.Stump tree={tree} key={index} />;
             return (
               <P className="animated-tree" key={index}>
                 <Buttons.Tree tree={tree} />
@@ -44,10 +41,8 @@ const App: React.FC<Props> = ({ game }) => {
           })}
         </Container>
       </PoseGroup>
-      <span className="score">
-        <Icons.Lumber />
-        <span className="score-number">{game.stats.wood}</span>
-      </span>
+      <Buttons.Jack level={game.level} />
+      <Buttons.Stats wood={game.stats.wood} />
     </main>
   );
 };

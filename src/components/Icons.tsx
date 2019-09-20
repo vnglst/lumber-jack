@@ -1,5 +1,7 @@
 import React from "react";
 
+export const Nothing: React.FC = () => <svg viewBox="0 0 640 640"></svg>;
+
 export const Stump: React.FC = () => (
   <svg viewBox="0 0 640 640">
     <path

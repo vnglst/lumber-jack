@@ -4,7 +4,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "mobx-react";
 import { onPatch, onSnapshot } from "mobx-state-tree";
-import { Game } from "./components/models";
+import { Game } from "./models";
 import "./index.css";
 
 const STORAGE_KEY = "lumber-jack";
@@ -19,14 +19,7 @@ if (storedState) {
 
 const game = Game.create(initialState);
 
-// add tree if no initial state
-if (!initialState) {
-  for (let x = 0; x < 6; x++) {
-    for (let y = 0; y < 6; y++) {
-      game.addTree();
-    }
-  }
-}
+game.initLevel();
 
 onSnapshot(game, snapshot => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot));
