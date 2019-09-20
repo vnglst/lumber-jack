@@ -17,6 +17,10 @@
   cursor: url("./axe.svg"), pointer;
 }
 
+.button:disabled {
+  cursor: default;
+}
+
 .button:hover:not([disabled]) {
   animation: zoom 100ms ease-in-out 1 forwards;
 }
@@ -44,25 +48,51 @@
 }
 
 .jack {
-  font-size: 1em;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 0.75em;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 75% 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1em 1em 0.5em 0.5em;
+  font-size: 1.5em;
 }
 
 .jack svg {
-  height: 5.5em;
-  width: 5.5em;
+  width: 2em;
+  height: 2em;
 }
 
-.jack .level-number {
+.level-number {
   color: white;
-  font-size: 1em;
+  font-size: 0.45em;
   font-variant-numeric: tabular-nums;
   position: relative;
-  right: 1.5em;
-  bottom: 5em;
-  letter-spacing: -2px;
+  float: right;
+  letter-spacing: -1px;
+}
+
+.stats {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 75% 0 0 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1em 0.5em 0.5em 1em;
+  font-size: 1.5em;
+}
+
+.stats svg {
+  width: 2em;
+  height: 2em;
+}
+
+.stats-number {
+  color: white;
+  font-size: 0.45em;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  float: right;
+  letter-spacing: -1px;
 }
 
 .lumber-animation {

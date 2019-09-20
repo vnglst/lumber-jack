@@ -1,16 +1,20 @@
 body,
 html {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   height: 100%;
-  display: grid;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-  font-size: calc(0.5em + 1.2vmin);
+  font-size: calc(0.45em + 1.2vmin);
+  display: grid;
   background-color: #111;
+  background-image: url("./tobias-van-schneider-unsplash.jpg");
+  background-size: cover;
 }
 
 *,
