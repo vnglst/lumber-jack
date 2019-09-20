@@ -13,7 +13,7 @@ body {
   font-size: calc(0.45em + 1.2vmin);
   display: grid;
   background-color: #111;
-  background-image: url("./tobias-van-schneider-unsplash.jpg");
+  background-image: url("https://res.cloudinary.com/vnglst/image/upload/w_0.25,f_auto/tobias-van-schneider-unsplash");
   background-size: cover;
 }
 
