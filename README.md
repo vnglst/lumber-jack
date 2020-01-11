@@ -1,6 +1,10 @@
 # Lumber Jack
 
-A React Progressive Web App figuring Jack the Lumberjack and his axe.
+Weekend project to learn more about Mobx State Tree. Simple kids game figuring Jack the Lumberjack and his axe. It's inspired by Stardew Valley and Monty Python. Don't forget to turn on sound!
+
+I was very impressed by Mobx State Tree and wrote about my experience with it here: https://blog.koenvangilst.nl/mobx-state-tree/
+
+
 
 ## Stack
 
